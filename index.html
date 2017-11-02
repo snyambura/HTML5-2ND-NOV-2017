@@ -11,44 +11,36 @@
 <!--simple table-->
 <center> <h3> Tables </h3> </center>
 <div id="tablediv" align="center">
-    <table style="border: 1px solid #ddd;
-        padding: 8px;
-        position: absolute;
-        width: 100%;">
-        <thead style="padding-top: 12px;
-        padding-bottom: 12px;
-        text-align: left;
-        background-color: #2f4f4f;
-        color: white;">
-        <td style="padding: 10px;"> Tag </td>
-        <td> Role </td>
+    <table style="border: 1px solid #ddd; padding: 8px; position: absolute; width: 100%;">
+        <thead style="padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #2f4f4f; color: white;">
+            <td style="padding: 10px;"> Tag </td>
+            <td> Role </td>
         </thead>
-        <tbody style="border: 1px solid #ddd;
-        padding: 8px;">
-        <tr >
-            <td style="border: 1px solid #2f4f4f;">
-                img
-            </td>
-            <td style="border: 1px solid #2f4f4f;">
-                Used to display images on a webpage
-            </td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #2f4f4f;">
-                a
-            </td>
-            <td style="border: 1px solid #2f4f4f;">
-                anchor tags: to embed links on a webpage
-            </td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #2f4f4f;">
-                p
-            </td>
-            <td style="border: 1px solid #2f4f4f;">
-                demarcates paragraphs in a webpage
-            </td>
-        </tr>
+        <tbody style="border: 1px solid #ddd; padding: 8px;">
+            <tr >
+                <td style="border: 1px solid #2f4f4f;">
+                    img
+                </td>
+                <td style="border: 1px solid #2f4f4f;">
+                    Used to display images on a webpage
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #2f4f4f;">
+                    a
+                </td>
+                <td style="border: 1px solid #2f4f4f;">
+                    anchor tags: to embed links on a webpage
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #2f4f4f;">
+                    p
+                </td>
+                <td style="border: 1px solid #2f4f4f;">
+                    demarcates paragraphs in a webpage
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -68,34 +60,36 @@
         <td width="25%"><img src="media/icecream.jpg" alt="icecream" /></td>
     </tr>
 </table>
+<p></p>
+<center> <h3> Canvas </h3> </center>
 
-<canvas id = ”canvasid”  width=”50” height=”20”></canvas>
+
+<canvas style="border: 1px solid #2f4f4f; margin-left: 40%;" id = ”canvasid”   width=”50” height=”20”></canvas>
 
 </div>
-<p></p>
-<p></p>
 <!--svg-->
-<div style="top: 40px; position: relative">
+<div style="top: 130px; position: relative">
     <center> <h3> Google Maps </h3> </center>
 
-    <div id="map" style="width:800px;height:400px; margin-left: 20%;"></div>
-
-<script>
-    function myMap() {
-        var mapOptions = {
-            center: new google.maps.LatLng(51.5, -0.12),
-            zoom: 10,
-            mapTypeId: google.maps.MapTypeId.HYBRID
-        }
-        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-    }
-</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+    <div id="map" style="width:800px;height:200px; margin-left: 20%;"></div>
 
 </div>
+    <script>
+        function myMap() {
+            var mapOptions = {
+                center: new google.maps.LatLng(-1.263400, 36.806551),
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.HYBRID
+            }
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+    </script>
 
-<div style="position: relative; top: 50px; margin-left: 20%;">
+    <!--<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtXEVHoJldvOef7SxXaN_7Cv70mplJD-s&callback=myMap"></script>
+
+
+<div style="position: relative; top: 80px; margin-left: 20%;">
     <center> <h3> SVG </h3> </center>
     <svg version="1.1"
          baseProfile="full"
@@ -109,7 +103,6 @@
     </svg>
 
 </div>
-<p></p>
 <!--end graphics-->
 
 
@@ -136,13 +129,13 @@
 <!--form implementation-->
 <div style="position: relative; top: 80px;">
 
-Sample Form
-<form>
-    First name:
-    <input type="text" name="firstname">
-    Last name:
-    <input type="text" name="firstname">
-</form>
+    Sample Form
+    <form>
+        First name:
+        <input type="text" name="firstname">
+        Last name:
+        <input type="text" name="firstname">
+    </form>
 </div>
  <!--end form-->
 
@@ -155,7 +148,7 @@ Sample Form
 
     <img id="drag1" src="media/icecream.jpg" draggable="true" ondragstart="drag(event)" width="150" height="200">
     <p style="top: 10px;"> </p>
-    <div style="width: 150px; position: relative; height: 200px; padding: 10px; border: 1px solid #aaaaaa;" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div style="width: 150px; position: relative; height: 200px; padding: 10px; border: 1px solid #2f4f4f;" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
 
 </div>
