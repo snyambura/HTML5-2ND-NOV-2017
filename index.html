@@ -1,0 +1,183 @@
+</!DOCTYPE
+<html>
+
+<head>
+	<title>HTML5</title>
+    <center> <h1> HTML Basics</h1> </center>
+</head>
+<body>
+<p></p>
+
+<!--simple table-->
+<center> <h3> Tables </h3> </center>
+<div id="tablediv" align="center">
+    <table style="border: 1px solid #ddd;
+        padding: 8px;
+        position: absolute;
+        width: 100%;">
+        <thead style="padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #2f4f4f;
+        color: white;">
+        <td style="padding: 10px;"> Tag </td>
+        <td> Role </td>
+        </thead>
+        <tbody style="border: 1px solid #ddd;
+        padding: 8px;">
+        <tr >
+            <td style="border: 1px solid #2f4f4f;">
+                img
+            </td>
+            <td style="border: 1px solid #2f4f4f;">
+                Used to display images on a webpage
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #2f4f4f;">
+                a
+            </td>
+            <td style="border: 1px solid #2f4f4f;">
+                anchor tags: to embed links on a webpage
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #2f4f4f;">
+                p
+            </td>
+            <td style="border: 1px solid #2f4f4f;">
+                demarcates paragraphs in a webpage
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!--end table-->
+<!--HTML graphics implementation-->
+<p>
+
+</p>
+<!--images-->
+<div style="position: relative; top: 150px;">
+    <center> <h3> Images </h3> </center>
+<table style="border-collapse:collapse;width:100%;">
+    <tr>
+        <td width="25%"><img src="media/icecream.jpg" alt="icecream" /></td>
+        <td width="25%"><img src="media/icecream.jpg" alt="icecream" /></td>
+        <td width="25%"><img src="media/icecream.jpg" alt="icecream" /></td>
+        <td width="25%"><img src="media/icecream.jpg" alt="icecream" /></td>
+    </tr>
+</table>
+
+<canvas id = ”canvasid”  width=”50” height=”20”></canvas>
+
+</div>
+<p></p>
+<p></p>
+<!--svg-->
+<div style="top: 40px; position: relative">
+    <center> <h3> Google Maps </h3> </center>
+
+    <div id="map" style="width:800px;height:400px; margin-left: 20%;"></div>
+
+<script>
+    function myMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(51.5, -0.12),
+            zoom: 10,
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        }
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+</div>
+
+<div style="position: relative; top: 50px; margin-left: 20%;">
+    <center> <h3> SVG </h3> </center>
+    <svg version="1.1"
+         baseProfile="full"
+         width="800" height="400"
+         xmlns="http://www.w3.org/2000/svg">
+
+        <rect width="100%" height="100%" fill="black" />
+
+        <circle cx="400" cy="200" r="80" fill="white" />
+
+    </svg>
+
+</div>
+<p></p>
+<!--end graphics-->
+
+
+<!--HTML multimedia implementation-->
+<div style="position: relative; top: 80px;">
+<hr/>
+
+<center> <h3> MULTIMEDIA </h3> </center>
+
+<h4> Video </h4>
+<video src="media/vid.mp4" height="400" width="700" controls> </video>
+<p></p>
+
+<h4> Audio </h4>
+<audio src="media/heavy.mp3" height="400" width="700" controls> </audio>
+<p></p>
+
+<h3> Plugin </h3>
+<object width="400" height="50" data="bookmark.swf"></object>
+<p></p>
+</div>
+    <!--end multimedia-->
+
+<!--form implementation-->
+<div style="position: relative; top: 80px;">
+
+Sample Form
+<form>
+    First name:
+    <input type="text" name="firstname">
+    Last name:
+    <input type="text" name="firstname">
+</form>
+</div>
+ <!--end form-->
+
+<!--Drag/Drop API Implementation-->
+<div style="position: relative; top: 80px;">
+
+    <center> <h3> DRAG AND DROP API </h3> </center>
+
+
+
+    <img id="drag1" src="media/icecream.jpg" draggable="true" ondragstart="drag(event)" width="150" height="200">
+    <p style="top: 10px;"> </p>
+    <div style="width: 150px; position: relative; height: 200px; padding: 10px; border: 1px solid #aaaaaa;" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+
+</div>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+
+<!--end drag/drop API implementation-->
+
+</body>
+
+</html>
+
